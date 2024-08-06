@@ -12,7 +12,10 @@ body{
     border-bottom: black solid 1px;
     gap: 30px;
     align-items: center;/*mingle of position will be come to an alignment*/
-
+    position: sticky;/*sticky+top = nav bar scrooling upto bottom*/
+    top: 0;
+    background-color: aliceblue;
+    z-index: 1;/*myleaarning box will be appear above it*/
 }
 
 
@@ -44,6 +47,27 @@ body{
     align-items: center;
 
 }
+
+/*mylearning__popup*/
+.mylearning{
+    position: relative;
+    cursor: pointer;
+}
+.mylearning__popup{
+    position: absolute;
+    background-color: aliceblue;
+    border: solid black 1px;
+    width: 100px;
+    top:150%;
+    padding: 10px;
+    right:0;
+    display: none;/*hiding the box*/
+}
+.mylearning:hover .mylearning__popup{
+    display: block;/*when the mouse come on mylearning the box will appear*/
+}
+
+
 .categories{
     display: flex;
     justify-content: space-around;
@@ -65,6 +89,16 @@ body{
 
 .udemyimage img{
     width: 100%;
+    position: relative;
+}
+.sale-img__offer{
+    background-color: white;
+    border: black solid 2px;
+    width: 400px;
+    padding: 10px;
+    position: absolute;
+    top:200px;
+    left: 40px;
 }
 
 .recomendation{
