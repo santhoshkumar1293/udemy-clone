@@ -81,10 +81,14 @@ body{
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
+    border:solid #A435F0 1px;
 }
 .categories p:hover{
-    background-color: #3d0661;
-    color: aliceblue;
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+    border:solid #A435F0 1px;
 }
 
 .udemyimage img{
@@ -99,6 +103,21 @@ body{
     position: absolute;
     top:200px;
     left: 40px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .recomendation{
